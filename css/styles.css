@@ -10,7 +10,7 @@ body{
 }
 h1{
     color: #000000;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 h2:hover{
     color:#F4CE13;
@@ -23,9 +23,11 @@ header > img{
     margin-left: auto;
     margin-right:auto;
 }
-p{
+p {
     text-align: center;
-    padding: 20px 20px 20px 20px;
+    padding-bottom: 20px;
+    font-size: 1.0rem; /* Tamaño de fuente más grande para el párrafo */
+    margin-bottom: 20px; /* Espacio entre el texto y el botón */
 }
 
 main {
@@ -34,9 +36,9 @@ padding-right: 30px;
 display: flex; 
 }
 .logo {
-    width: 350px; 
+    width: 310px; 
     height: auto; 
-    margin-top: 30px; 
+    margin-top: 10px; 
     margin-left: 20px;
     margin-right: 20px; 
 }
@@ -69,7 +71,7 @@ display: flex;
 .nav__link {
     font-size: 18px;
     margin-left: auto;
-    padding: 0;
+    padding-top: 30px;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -94,7 +96,7 @@ display: flex;
 .nav__logo {         
     justify-content: center;  
     align-items: center;      
-    width: 100%;              
+    width: 80%;              
 }
 
 .nav_l { 
@@ -193,12 +195,12 @@ display: flex;
     background-color: black;
     margin-bottom: 20px;
     position: relative;
-    height: 410px; /* Altura predeterminada para pantallas grandes */
+    height: 410px; 
     width: 100%; /* Ocupa todo el ancho disponible */
     max-width: 100vw; /* Asegura que no exceda el ancho de la ventana */
     overflow: hidden;
     text-align: center;
-    padding: 20px; /* Espaciado general */
+    padding-bottom: 20px;
     box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
@@ -216,12 +218,57 @@ display: flex;
     opacity: 0.5; 
     z-index: 1; 
 }
-
-h1, p {
-    position: relative; /* Necesario para posicionar correctamente los elementos */
-    z-index: 2;
+.menubutton1 {
+    z-index: 10; 
+    position: relative; /* Asegura que el z-index tenga efecto */
+    display: block; 
+    margin: 20px auto; /* Mantiene el margen debajo del botón y lo centra */
+    background-color: #000000; 
+    color: #F4CE13; /* Color del texto */
+    font-size: 1.2rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
 }
 
+.menubutton1:hover {
+    color: #000;
+    background-color: #F4CE13; /* Color de fondo al pasar el mouse */
+}
+/* Estilos para pantallas grandes */
+@media (min-width: 1025px) {
+    .container {
+    padding-bottom: 20px;
+        height: 410px; /* Altura fija para pantallas grandes */
+    }
+
+    h1 {
+        font-size: 3.5rem; /* Tamaño de fuente adecuado para pantallas grandes */
+        margin-bottom: 20px; /* Espacio entre el título y el texto */
+    }
+}
+
+/* Estilos para dispositivos intermedios */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding-bottom: 20px;
+        height: auto; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    h1 {
+        margin-top: 20px;
+        font-size: 2.2rem; /* Tamaño de fuente adecuado para pantallas intermedias */
+        margin-bottom: 10px; /* Espacio entre el título y el texto */
+    }
+
+    p {
+        font-size: 1.2rem; /* Tamaño de fuente más grande para el párrafo */
+        margin-bottom: 10px; /* Espacio entre el texto y el botón */
+    }
+}
+
+/* Estilos para pantallas más pequeñas */
 @media (max-width: 768px) {
     .container {
         padding: 20px; /* Mantiene un espaciado adecuado */
@@ -232,22 +279,17 @@ h1, p {
     }
 
     h1 {
-        font-size: 1.5rem; /* Tamaño de fuente más pequeño para el título */
+        font-size: 1.8rem; /* Tamaño de fuente más pequeño para el título */
         margin-bottom: 10px; /* Espacio entre el título y el texto */
     }
 
     p {
-        font-size: 1rem; /* Tamaño de fuente más pequeño para el párrafo */
-        margin-bottom: 10px; /* Espacio entre el texto y el botón */
-    }
-
-    .menubutton1 {
-        display: block; 
-        margin: 20px auto; /* Centra el botón horizontalmente */
+        display: none; /* Oculta el párrafo en pantallas pequeñas */
     }
 }
+
 .container h1 {
-    padding-top: 20px;
+    margin-top: 70px;
     display: inline-block;
     animation-name: bounce;
     animation-duration: 2s;
@@ -257,13 +299,13 @@ h1, p {
     z-index: 2;
 }
 
-.container p{
+.container p {
     line-height: 28px; 
     color: #fefffe;
     text-align: center;
     position: relative;
     z-index: 2;
-    margin: 20px 100px
+    margin: 15px 100px;
 }
 .content {
     position: relative; 
@@ -272,6 +314,26 @@ h1, p {
     padding: 20px; 
     box-sizing: border-box; 
 }
+/*section*/
+section {
+    text-align: center;
+    flex: 1; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+article {
+    padding: 20px; /* Aplica un padding uniforme en todos los lados */
+    border-radius: 5px; 
+    margin: 0 10px; /* Espacio lateral entre artículos */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+article p {
+    line-height: 24px; 
+    margin: 20px 0; /* Espacio superior e inferior, pero no lateral */
+}
+
 .section_img {
     transition: opacity 0.3s ease; 
     position: relative; 
@@ -284,41 +346,39 @@ h1, p {
     overflow: hidden; 
     background-color: #000000;
 }
+
 .section_img:hover {
     opacity: 0.5; 
 }
 
+/* Responsivo */
 @media (max-width: 375px) {
     .section_img {
         margin: -20px auto; 
-        height: 200px; /* Adjust height for smaller screens */
+        height: 200px; /* Ajusta la altura para pantallas más pequeñas */
     }
-    .menubutton1{
-        display: none;
+    .menubutton1 {
+        display: none; /* Oculta el botón en pantallas pequeñas */
+    }
+
+    article {
+        padding: 10px; /* Reduce padding lateral en pantallas pequeñas si es necesario */
     }
 }
+
 @media (max-width: 768px) {
     .nav__link--menu .menubutton1,
     .nav__link--menu .menubutton2 {
         display: none; /* Oculta solo los botones específicos */
     }
+
+    article {
+        padding: 15px; /* Ajusta el padding lateral si es necesario para dispositivos medianos */
+    }
 }
-.menubutton1 {
-    background-color: #000;
-    position: relative;
-    z-index: 2; /* Por encima del fondo */
-    color: #F4CE13;
-    border: none;
-    font-size: 1rem;
-    padding: 10px 20px;
-    margin-top: 15px; /* Separación entre el título y el botón */
-    cursor: pointer;
-}
-.menubutton1:hover{
-    background-color:#F4CE13;
-    color:#000000; 
-}
+
 .menubutton1, .menubutton2 {
+    transition: background-color 0.3s; 
     width: 170px;
     border-radius: 20px;
     margin-top: 3px; 
@@ -336,22 +396,6 @@ h1, p {
 .menubutton2:hover{
     background-color:#000000;
     color: #F4CE13; 
-}
-section {
-    text-align: center;
-    flex: 1; 
-    padding: 20px; 
-    box-sizing: border-box; 
-}
-article {
-    padding-right: 20px;
-    padding-left: 20px;
-    border-radius: 5px; 
-    padding-bottom: 20px; /* Padding general */
-}
-article p {
-    line-height: 24px; 
-    margin: 20px; 
 }
 /* carousel */
 .carousel-container {
@@ -413,13 +457,12 @@ article p {
     .carousel-container {
         height: 250px; 
     }
-    
     .carousel-post h1 {
         font-size: 1.2rem; /* Tamaño ajustado para pantallas pequeñas */
     }
 
     .menubutton1 {
-        font-size: 0.9rem; /* Tamaño ajustado del botón */
+        font-size: 1.2rem; /* Tamaño ajustado del botón */
     }
 }
 
@@ -435,6 +478,7 @@ div p{
 
     }
     .container h1{
+        font-size: 1.5rem;
         margin-top: 30px;
         margin-bottom: 40px;
 
