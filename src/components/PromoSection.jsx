@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { useLang } from '../context/LangContext'
 
-const BASE = 'https://clorostica.github.io/LittleLemon2/img/'
+const BASE = '/img/'
 
 // Parse "200+" → { end:200, suffix:'+', dec:0 }  |  "4.9★" → { end:4.9, suffix:'★', dec:1 }
 function parseStat(str) {

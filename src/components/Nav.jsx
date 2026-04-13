@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useLang } from '../context/LangContext'
 import LangSwitch from './LangSwitch'
 
-const BASE = 'https://clorostica.github.io/LittleLemon2/img/'
+const BASE = '/img/'
 
 export default function Nav() {
   const { t } = useLang()

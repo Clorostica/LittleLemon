@@ -1,6 +1,6 @@
 import { useLang } from '../context/LangContext'
 
-const BASE = 'https://clorostica.github.io/LittleLemon2/img/'
+const BASE = '/img/'
 
 export default function Footer() {
   const { t } = useLang()

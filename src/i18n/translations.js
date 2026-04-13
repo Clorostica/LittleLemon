@@ -1,4 +1,4 @@
-const BASE = 'https://clorostica.github.io/LittleLemon2/img/'
+const BASE = '/img/'
 
 const translations = {
   en: {
